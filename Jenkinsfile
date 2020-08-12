@@ -4,23 +4,34 @@ pipeline {
   
   stages {
     
-    stage("build") {
+    stage("code checkout) {
+          steps {
+           git "https://github.com/teja996/Devops-clgproject-.git"
+          }
+          }
+          
+    stage("compile") {
       
       steps {
         echo 'building the appication...'
+        bat 'mvn clean'
       }
     }
-    stage("test") {
+   
+          
+    stage("install") {
       
       steps {
         echo 'testing the appication...'
+        bat 'mvn install'
       }
     }
-   /* stage("deploy") {
+          stage("test") {
       
       steps {
-        echo 'deploying the appication...'
+        echo 'testing the appication...'
+        bat 'test'
       }
-    } */
+    }
   }
 }
