@@ -35,7 +35,7 @@ pipeline {
       steps {
         echo 'testing the appication...'
         withMaven(maven : 'maven_3.6.3'){
-        bat 'test'
+        bat 'mvn test'
         }
       }
     }
