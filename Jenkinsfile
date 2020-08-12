@@ -16,11 +16,11 @@ pipeline {
         echo 'testing the appication...'
       }
     }
-    stage("deploy") {
+   /* stage("deploy") {
       
       steps {
         echo 'deploying the appication...'
       }
-    }
+    } */
   }
 }
